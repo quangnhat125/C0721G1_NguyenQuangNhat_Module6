@@ -65,12 +65,49 @@
     width:100%;
     background-color: lightgreen;
   } */
+      .wrapper{
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-between;
+
+
+      }
+      li {
+        align-items: center;
+        margin-left: 50px;
+      }
+      li:hover{
+        transform:scale(1.3);
+        transition: 0.7s;
+      }
+      li{display: inline}
+      li a{
+        text-align: center;
+        align-items: center;
+      }
+      /*img{*/
+      /*  !*margin-left: 10px*!*/
+      /*  width: 100%;*/
+      /*  height: 100%;*/
+      /*  object-position: center;*/
+      /*  object-fit: cover;*/
+      /*  transition: 0.25s;*/
+      /*}*/
+      .image {
+        width: 33%;
+        height: 200px;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 20px 0;
+      }
     </style>
   <body>
     <div class="container-fluid" style="
     padding-right: 0px;
     padding-left: 0px;">
-    <div class="row" style="background-color: whitesmoke;">
+    <div class="row" style="background-color: whitesmoke; padding: 15px">
       <div class="col-1"></div>
       <div class="col-2">(+84)913379559</div>
       <div class="col-3">Email: info@codegym.vn</div>
@@ -82,17 +119,18 @@
     </div>
     <div class="row" style="background-color: ghostwhite;">
       <div class="col-1"></div>
-      <div class="col-2"><img src="logo C0721G1.png" height="72" width="191"></div>
-      <div class="col-6">
-        <marquee style="font-size: x-large; color: #058af0; font-family: sans-serif;">
+      <div class="col-2"><img src="https://i.imgur.com/Cn2aedI.png" height="72" width="191"></div>
+      <div class="col-6" style="padding: 15px">
+        <marquee style="font-size: x-large; color: #058af0; font-family: 'Lucida Grande';">
           CÙNG TẠO CƠ HỘI THÀNH CÔNG - HƯỚNG TỚI SỨC KHỎE CỘNG ĐỒNG</marquee
         >
       </div>
-      <div class="col-3">
-        <button class="btn btn-primary btn-success">
+      <div class="col-3" style="padding: 15px">
+        <button class="btn btn-primary btn-primary">
           <i class="fas fa-mobile-alt"> 0913379559</i>
         </button>
-        <i style="font-size: x-large;" class="fas fa-shopping-cart"></i>
+        <button class="btn  btn-primary"><i  class="fas fa-shopping-cart"></i></button>
+
       </div>
     </div>
       <div class="row" style="background-color: #058af0;">
@@ -106,17 +144,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center; color: white">Trang Chủ
+                  <a class="nav-link" href="#" style=" text-align: center; color: white">TRANG CHỦ
                     <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">Giới thiệu</a>
+                  <a class="nav-link" href="#" style="text-align: center;color: white">GIỚI THIỆU</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                     style="margin-right: 50px; text-align: center;color: white">
-                    Sản Phẩm
+                     style="text-align: center;color: white">
+                    SẢN PHẨM
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -126,21 +164,20 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">CHỨNG CHỈ CHẤT
-                    LƯỢNG</a>
+                  <a class="nav-link" href="#" style=" text-align: center;color: white">CHỨNG CHỈ CHẤT </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">HOẠT ĐỘNG CÔNG
+                  <a class="nav-link" href="#" style="text-align: center;color: white">HOẠT ĐỘNG CÔNG
                     TY</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">ĐỐI TÁC</a>
+                  <a class="nav-link" href="#" style="text-align: center;color: white">ĐỐI TÁC</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">LIÊN HỆ</a>
+                  <a class="nav-link" href="#" style="text-align: center;color: white">LIÊN HỆ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="margin-right: 50px; text-align: center;color: white">LOGIN</a>
+                  <a class="nav-link" href="#" style=" text-align: center;color: white">LOGIN</a>
                 </li>
               </ul>
             </div>
@@ -185,22 +222,129 @@
     </div>
   </div>
 </div>
-      <section class="main-list-content">
+<section class="main-list-content">
   <div class="row" id="content">
-  <div class="col-12" style="text-align: center">
-    <span style="font-weight: bolder; font-size: xx-large">
-      DANH MỤC CHÍNH</span>
-    <br>
-    <i style="font-size: xx-large" class="fas fa-horizontal-rule"></i>
+    <div class="col-12" style="text-align: center">
+      <span style="font-weight: bolder; font-size: xx-large">
+      DANH MỤC CHÍNH
+      </span>
+      <br>
+      <i style="font-size: xx-large" class="fas fa-horizontal-rule"></i>
     </div>
     <div class="gap-space">
     </div>
-    <div class="row"></div>
-    <div class="row">
+  </div>
+<div class="row container" >
+<!--      <div class="row" id="row-382849867">-->
+<!--        <div id="col-1720081873" class="col medium-4 small-12 large-4" data-animate="fadeInUp" data-animated="true">-->
+<!--          <div class="col-inner">-->
+<!--            <div class="box has-hover img-danh-muc  has-hover box-shade dark box-text-bottom">-->
+<!--              <div class="box-image">-->
+<!--                <a href="https://truongthinhphatholding.com.vn/vi/danh-muc/thiet-bi-bao-ho-y-te/">-->
+<!--                  <div class="image-zoom-long">-->
+<!--                  <img width="540" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" class="attachment-original size-original lazyloaded" alt="" sizes="(max-width: 540px) 100vw, 540px" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png 540w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1-500x367.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1-300x220.png 300w" data-ll-status="loaded">-->
+<!--                    <noscript>-->
+<!--                      <img width="540" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" class="attachment-original size-original" alt="" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png 540w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1-500x367.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1-300x220.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></noscript>-->
+<!--                    <div class="shade"></div>-->
+<!--                  </div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="box-text text-center">-->
+<!--                <div class="box-text-inner">-->
+<!--                  <h2><strong><a href="https://truongthinhphatholding.vn/vi/danh-muc/thiet-bi-bao-ho-y-te/" style="color: white">Thiết bị bảo hộ y tế</a></strong></h2>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div id="col-559336558" class="col medium-4 small-12 large-4" data-animate="fadeInUp" data-animated="true">-->
+<!--          <div class="col-inner">-->
+<!--            <div class="box has-hover img-danh-muc  has-hover box-shade dark box-text-bottom">-->
+<!--              <div class="box-image">-->
+<!--                <a href="#">-->
+<!--                  <div class="image-zoom-long">-->
+<!--                  <img width="541" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" class="attachment-original size-original lazyloaded" alt="" sizes="(max-width: 541px) 100vw, 541px" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png 541w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1-500x366.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1-300x220.png 300w" data-ll-status="loaded"><noscript><img width="541" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" class="attachment-original size-original" alt="" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png 541w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1-500x366.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1-300x220.png 300w" sizes="(max-width: 541px) 100vw, 541px" /></noscript>								<div class="shade"></div>			</div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="box-text text-center">-->
+<!--                <div class="box-text-inner">-->
+<!--                  <h2><strong><a href="#">Sản phẩm chăm sóc sức khỏe</a></strong></h2>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div id="col-1524882152" class="col medium-4 small-12 large-4" data-animate="fadeInUp" data-animated="true">-->
+<!--          <div class="col-inner">-->
+<!--            <div class="box has-hover img-danh-muc  has-hover box-shade dark box-text-bottom">-->
+<!--              <div class="box-image">-->
+<!--                <a href="#">-->
+<!--                  <div class="image-zoom-long">-->
+<!--                  <img width="540" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" class="attachment-original size-original lazyloaded" alt="" sizes="(max-width: 540px) 100vw, 540px" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png 540w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1-500x367.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1-300x220.png 300w" data-ll-status="loaded"><noscript><img width="540" height="396" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" class="attachment-original size-original" alt="" srcset="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png 540w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1-500x367.png 500w, https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1-300x220.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></noscript>								<div class="shade"></div>			</div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="box-text text-center">-->
+<!--                <div class="box-text-inner">-->
+<!--                  <h2><strong><a href="#">Thiết bị y tế &amp; vật tư tiêu hao</a></strong></h2>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      <div class="col-12">-->
+
+<!--        <div class="wrapper">-->
+<!--          <div class="image">-->
+<!--            <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" alt="">-->
+<!--          </div>-->
+<!--          &lt;!&ndash;    item image&ndash;&gt;-->
+<!--          <div class="image">-->
+<!--            <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" alt="">-->
+<!--          </div>-->
+<!--          <div class="image">-->
+<!--            <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" alt="">-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" alt="Card image cap">
+          <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
     </div>
   </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" alt="Card image cap">
+          <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" alt="Card image cap">
+          <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+  </div>
+<!--      <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" style="width: 33%; margin-left: 5px"/>-->
+
+
+<!--      <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png"style="width: 33%">-->
+
+
+<!--      <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png"style="width: 33%">-->
+
+</div>
 </section>
+      <br>
 <div class="row" id="footer" style="background-color: #058af0;">
   <div class="col-4" style="text-align: justify">
     <span style="font-weight: bold; color: white;">CTY TNHH TBYT - DƯỢC CODEGYM</span>
