@@ -52,6 +52,38 @@
     />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <style>
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .text {
+        color: black;
+        font-family: "Lucida Grande";
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+      .container:hover .image {
+        opacity: 0.3;
+      }
+
+      .container:hover .middle {
+        opacity: 1;
+      }
       li a{
         text-align: center;
         align-items: center;
@@ -61,22 +93,56 @@
         margin: 0;
         padding: 0;
       }
-      .navLi {
-        align-items: center;
-        margin-left: 30px;
-      }
-      .navLi:hover{
+
+      /*.li {*/
+      /*  align-items: center;*/
+      /*  margin-left: 30px;*/
+      /*}*/
+      li:hover{
         transform:scale(1.3);
         transition: 0.7s;
       }
+      .seller:hover{
+        border: ridge;
+        border-color: blue;
+        transition: 0.5s;
+      }
+      .menu li{
+        margin-right: 50px;
+      }
+
+
+
+
+      #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #058af0; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+
+      #myBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+      }
+
     </style>
   <body>
 <!--  /* HEADER */-->
     <div class="container-fluid">
-    <div class="row" style="background-color: whitesmoke; padding: 15px">
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
+    <div class="row" style="background-color: #058af0 ;">
       <div class="col-1"></div>
-      <div class="col-2">(+84)913379559</div>
-      <div class="col-3">Email: info@codegym.vn</div>
+      <div class="col-2"><i class="fas fa-phone-alt"></i>(+84)913379559</div>
+      <div class="col-3"><i class="fas fa-envelope"></i>Email: info@codegym.vn</div>
       <div class="col-3"></div>
       <div class="col-3">
         <input type="text" placeholder="Search...." />
@@ -101,54 +167,24 @@
     </div>
       <div class="row" style="background-color: #058af0;">
         <div class="col-12">
-          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #058af0;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active navLi">
-                  <a class="nav-link text-white" href="#">TRANG CHỦ
-                    <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item navLi ">
-                  <a class="nav-link text-white" href="#">GIỚI THIỆU</a>
-                </li>
-                <li class="nav-item dropdown navLi">
-                  <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                  >
-                    SẢN PHẨM
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-white" href="#">Action</a>
-                    <a class="dropdown-item text-white" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-white" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item navLi">
-                  <a class="nav-link text-white " href="#"><span>CHỨNG CHỈ CHẤT
-                            LƯỢNG</span></a>
-                </li>
-                <li class="nav-item navLi" href="#">
-                  <a class="nav-link text-white">HOẠT ĐỘNG CÔNG
-                    TY</a>
-                </li>
-                <li class="nav-item navLi">
-                  <a class="nav-link text-white" href="#">ĐỐI TÁC</a>
-                </li>
-                <li class="nav-item navLi">
-                  <a class="nav-link text-white" href="#">LIÊN HỆ</a>
-                </li>
-                <li class="nav-item navLi">
-                  <a class="nav-link text-white" href="#">LOGIN</a>
-                </li>
-              </ul>
+          <div class="menu" style="background-color: #058af0;height: 50px">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <ul style="list-style: none;display:flex ;padding-top: 12px; ">
+                    <li><a style="color: white;" href="/home">TRANG CHỦ</a></li>
+                    <li><a style="color: white;" href="/employee">GIỚI THIỆU</a></li>
+                    <li><a style="color: white;" href="/customer">SẢN PHẨM</a></li>
+                    <li><a style="color: white;" href="">CHỨNG CHỈ CHẤT LƯỢNG </a></li>
+                    <li><a style="color: white;" href="">HOẠT ĐỘNG CÔNG TY</a></li>
+                    <li><a style="color: white;" href="">ĐỐI TÁC</a></li>
+                    <li><a style="color: white;" href="">LOGIN</a></li>
+
+                  </ul>
+                </div>
+              </div>
             </div>
-          </nav>
+          </div>
         </div>
       </div>
       </div>
@@ -190,10 +226,13 @@
     </div>
   </div>
 </div>
-<section class="main-list-content">
+<br>
+<br>
+<section class="main-list-content" style="background-image: url(https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Background-1.png);">
+
   <div class="row" id="content">
     <div class="col-12" style="text-align: center">
-      <span style="font-weight: bolder; font-size: xx-large">
+      <span style="font-weight: bolder; font-size: xx-large; font-family: 'Lucida Grande'">
       DANH MỤC CHÍNH
       </span>
       <br>
@@ -202,30 +241,43 @@
     <div class="gap-space">
     </div>
   </div>
-<div class="row container" >
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" alt="Card image cap">
-          <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" alt="Card image cap">
-          <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" alt="Card image cap">
-          <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="row">
+    <div class="col-4">
+      <div class="container">
+        <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">
+            <a href="">
+              THIẾT BỊ Y TẾ
+            </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="container">
+        <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-175-1-1.png" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">
+            <a href="">
+              SẢN PHẨM CHĂM SÓC SỨC KHOẺ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="container">
+        <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-176-1.png" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">
+            <a href="">
+              THIẾT BỊ Y TẾ & VẬT TƯ TIÊU HAO
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <!--      <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Group-174-1.png" style="width: 33%; margin-left: 5px"/>-->
 
@@ -238,9 +290,149 @@
 </div>
 </section>
 <br>
+<br>
+<div>
+  <div class="row">
+    <div class="col-12">
+      <section id="best-seller" style="background-image: url(https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/BAN-CHAY-1.png);">
+        <div class="row" >
+          <div class="col-12" style="text-align: center">
+          <span style="font-weight: bolder; font-size: xx-large; font-family: 'Lucida Grande'">
+      SẢN PHẨM BÁN CHẠY
+          </span>
+          <br>
+           <i style="font-size: xx-large" class="fas fa-horizontal-rule"></i>
+          </div>
+          <div class="gap-space">
+          </div>
+        </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-3">
+          <img href="" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/khau-trang-3-lop.jpg" width="100%" class="seller">
+          <div style="text-align: center">
+            <br>
+            <a class="seller"  style="color: black; font-weight: bold" href="">KHẨU TRANG THƯỜNG 3 & 4 LỚP</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Untitled-2.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">ÁO CHOÀNG BẢO HỘ Y TẾ</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/khau-trang-famapro.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">KHẨU TRANG FAMAPRO VN95 KHÔNG VAN THỞ</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/khau-trang-em-be.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">KHẨU TRANG TRẺ EM</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <img href="" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/do-bao-ho-y-te.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">TRỌN BỘ BẢO HỘ Y TẾ</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Untitled-1.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">GIÀY VÀ MŨ BẢO HỘ Y TẾ</a>
+          </div>
+        </div>
+        <div class="col-3 seller">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Gloves.jpg" width="100%" >
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a style="color: black; font-weight: bold" href="">GĂNG TAY</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/linh-chi-tao-do.jpg" width="100%" class="seller">
+          <br>
+          <div style="text-align: center">
+            <br>
+            <a class="seller" style="color: black; font-weight: bold" href="">LINH CHI TÁO ĐỎ</a>
+          </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+    </div>
+  </div>
+</section>
+  </div>
+</div>
+<br>
+  <div class="row company-infomation">
+    <div class="col-6">
+      <section id="company-info">
+        <div class="row" >
+          <div class="col-12" style="text-align: center">
+          <span style="font-weight: bolder; font-size: xx-large; font-family: 'Lucida Grande'">
+      VỀ CHÚNG TÔI
+          </span>
+            <br>
+            <i style="font-size: xx-large" class="fas fa-horizontal-rule"></i>
+          </div>
+          <div class="gap-space">
+            <br>
+            <br>
+          </div>
+          <div class="row">
+            <div class="col-12" style="text-align: justify; padding-left: 150px; padding-right: 20px">
+              Công ty TNHH THIẾT BỊ Y TẾ – DƯỢC TRƯỜNG THỊNH PHÁT là một công ty chuyên cung cấp tất cả các sản phẩm
+              phục vụ hỗ trợ chăm sóc và bảo vệ sức khỏe con người (sản phẩm bảo hộ y tế, vật tư tiêu hao, trang thiết bị y tế).
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  <div class="col-6">
+    <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/TTP3.jpg" width="50%" style="padding-left: 100px">
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <section id="coporate">
+      <div class="row" >
+        <div class="col-12" style="text-align: center">
+          <span style="font-weight: bolder; font-size: xx-large; font-family: 'Lucida Grande'">
+      Đối tác
+          </span>
+          <br>
+          <i style="font-size: xx-large" class="fas fa-horizontal-rule"></i>
+        </div>
+        <div class="gap-space">
+          <br>
+          <br>
+        </div>
+  </div>
 <!--      /* FOOTER */-->
 <div class="row" id="footer" style="background-color: #058af0;">
-  <div class="col-4" style="text-align: justify">
+  <div class="col-4" style="text-align: justify; padding-left: 100px ">
     <span style="font-weight: bold; color: white;">CTY TNHH TBYT - DƯỢC CODEGYM</span>
     <br>
     <br>
@@ -283,7 +475,6 @@
   <span><a style="color: white" href="#">Thiết bị y tế & vật tư tiêu hao</a></span>
 </div>
 </div>
-</div>
 <div class="row" id="copyright">
   <div class="col-4" style="text-align: justify">
   <span>COPYRIGHT<i class="fa fa-copyright" aria-hidden="true">2021 CODEGYM.VN</i></span></div>
@@ -295,5 +486,29 @@
     <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
   </div>
 </div>
+    </section>
+  </div>
+</div>
   </body>
 </html>
+<script>
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>

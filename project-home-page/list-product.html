@@ -52,6 +52,9 @@
     />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <style>
+        .menu li{
+            margin-right: 50px;
+        }
         li a{
             text-align: center;
             align-items: center;
@@ -69,6 +72,8 @@
             transform:scale(1.3);
             transition: 0.7s;
         }
+
+
     </style>
 <body>
 <!--  /* HEADER */-->
@@ -101,54 +106,24 @@
     </div>
     <div class="row" style="background-color: #058af0;">
         <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #058af0;">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active navLi">
-                            <a class="nav-link text-white" href="#">TRANG CHỦ
-                                <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item navLi ">
-                            <a class="nav-link text-white" href="#">GIỚI THIỆU</a>
-                        </li>
-                        <li class="nav-item dropdown navLi">
-                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            >
-                                SẢN PHẨM
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-white" href="#">Action</a>
-                                <a class="dropdown-item text-white" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-white" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item navLi">
-                            <a class="nav-link text-white " href="#"><span>CHỨNG CHỈ CHẤT
-                            LƯỢNG</span></a>
-                        </li>
-                        <li class="nav-item navLi" href="#">
-                            <a class="nav-link text-white">HOẠT ĐỘNG CÔNG
-                                TY</a>
-                        </li>
-                        <li class="nav-item navLi">
-                            <a class="nav-link text-white" href="#">ĐỐI TÁC</a>
-                        </li>
-                        <li class="nav-item navLi">
-                            <a class="nav-link text-white" href="#">LIÊN HỆ</a>
-                        </li>
-                        <li class="nav-item navLi">
-                            <a class="nav-link text-white" href="#">LOGIN</a>
-                        </li>
-                    </ul>
+            <div class="menu" style="background-color: #058af0;height: 50px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul style="list-style: none;display:flex ;padding-top: 12px; ">
+                                <li><a style="color: white;" href="/home">TRANG CHỦ</a></li>
+                                <li><a style="color: white;" href="/employee">GIỚI THIỆU</a></li>
+                                <li><a style="color: white;" href="/customer">SẢN PHẨM</a></li>
+                                <li><a style="color: white;" href="">CHỨNG CHỈ CHẤT LƯỢNG </a></li>
+                                <li><a style="color: white;" href="">HOẠT ĐỘNG CÔNG TY</a></li>
+                                <li><a style="color: white;" href="">ĐỐI TÁC</a></li>
+                                <li><a style="color: white;" href="">LOGIN</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </div>
 </div>
@@ -156,29 +131,63 @@
     <br>
 </div>
 <div class="row">
-    <div class="col-1"></div>
     <div class="col-3">
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
-                Danh Sách vật tư
-            </a>
-            <a href="#" class="list-group-item list-group-item-action dropdown">
-                <ul>Thiết bị bảo hộ y tế
-                <li>
-                    Găng tay y tế
-                </li>
+        <nav id="sidebar" class="order-last" class="img" style="background-image: url(sidebar-10/images/bg_1.jpg); height: 100%">
+            <div class="">
+                <h1><a href="sidebar-10/index.html" class="logo">Manager</a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <div class="dropdown">
+                            <a class="fa fa-home mr-3 "  data-toggle="dropdown" >
+                                Hệ thống
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <a href="#"><span class="fa fa-home mr-3"></span>Hệ thống</a>
+                    </li>
                     <li>
-                        Khẩu trang y tế
+                        <a href="#"><span class="fa fa-user mr-3"></span>Danh mục</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-sticky-note mr-3"></span>Thống kê</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-cogs mr-3"></span>Trợ giúp</a>
                     </li>
                 </ul>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-        </div>
+            </div>
+        </nav>
     </div>
-    <div class="col-8">
-        <p>alo</p>
+    <div class="col-9">
+        <div class="row">
+            <div class="col-4">
+                <img href="" src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/khau-trang-3-lop.jpg" width="80%" class="seller">
+                <div style="text-align: center">
+                    <br>
+                    <a class="seller"  style="color: black; font-weight: bold" href="">KHẨU TRANG THƯỜNG 3 & 4 LỚP</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/Untitled-2.jpg" width="80%" class="seller">
+                <br>
+                <div style="text-align: center">
+                    <br>
+                    <a class="seller" style="color: black; font-weight: bold" href="">ÁO CHOÀNG BẢO HỘ Y TẾ</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="https://truongthinhphatholding.com.vn/wp-content/uploads/2020/07/khau-trang-famapro.jpg" width="80%" class="seller">
+                <br>
+                <div style="text-align: center">
+                    <br>
+                    <a class="seller" style="color: black; font-weight: bold" href="">KHẨU TRANG FAMAPRO VN95 KHÔNG VAN THỞ</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
